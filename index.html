@@ -3,97 +3,110 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Michel Phelippeau</title>
-
+<title>Michel Phelippeau — Peintre</title>
+<meta name="description" content="Michel Phelippeau, peintre. Huiles sur toile et sur bois — paysages, scènes intimistes, portraits.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <a href="../index.html" class="site-title"><span class="first">michel</span> phelippeau</a>
+  <a href="index.html" class="site-title"><span class="first">michel</span> phelippeau</a>
   <nav class="main-nav">
-    <a href="../index.html">Accueil</a>
+    <a href="index.html" class="active">Accueil</a>
     <div class="nav-item-dropdown">
-      <a href="oeuvres/portraits.html" class="dropdown-toggle">Œuvres</a>
+      <a href="pages/oeuvres/portraits.html" class="dropdown-toggle">Œuvres</a>
       <div class="dropdown-menu">
-        <a href="oeuvres/portraits.html">Portraits</a>
-        <a href="oeuvres/paysages.html">Paysages</a>
-        <a href="oeuvres/natures-mortes.html">Natures mortes</a>
-        <a href="oeuvres/personnages.html">Personnages</a>
+        <a href="pages/oeuvres/portraits.html">Portraits</a>
+        <a href="pages/oeuvres/paysages.html">Paysages</a>
+        <a href="pages/oeuvres/natures-mortes.html">Natures mortes</a>
+        <a href="pages/oeuvres/personnages.html">Personnages</a>
       </div>
     </div>
-    <a href="videos.html">Vidéos</a>
-    <a href="biographie.html">Biographie</a>
-    <a href="contact.html" class="active">Contact</a>
+    <a href="pages/biographie.html">Biographie</a>
+    <a href="pages/contact.html">Contact</a>
   </nav>
   <button class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
 </header>
 
-<div class="page-transition">
-<section class="section" style="padding-top:160px;">
-  <p class="section-eyebrow">Contact</p>
-  <h1 class="section-title">Échanger autour d'une œuvre</h1>
-  <p class="section-lede">Pour toute question, demande de commande ou acquisition, écrivez-moi directement.</p>
+<section class="hero">
+  <div class="hero-image-wrap" id="hero-wrap" style="background: linear-gradient(135deg, var(--charbon), var(--olive));">
+    <img src="images/oeuvres/la-chevauchee-idyllique.jpg" alt="La chevauchée idyllique, peinture de Michel Phelippeau" onerror="this.style.display='none'; document.getElementById('hero-wrap').classList.add('no-image');">
+  </div>
+  <div class="hero-intro">
+    <p>Peindre, c'est retenir la lumière avant qu'elle ne change.</p>
+  </div>
+  <div class="hero-cartel">
+    <div class="titre">La chevauchée idyllique</div>
+    <div class="detail">Huile</div>
+  </div>
+  <div class="scroll-cue">Découvrir</div>
+</section>
 
-  <div class="contact-grid">
-    <dl class="contact-info">
-      <dt>Email</dt>
-      <dd><a href="mailto:contact@michel-phelippeau.com">contact@michel-phelippeau.com</a></dd>
+<section class="section" id="intro">
+  <p class="section-eyebrow">Peintre — France</p>
+  <h1 class="section-title">Une peinture née dans les galeries du Louvre</h1>
+  <p class="section-lede">
+    Michel Phelippeau puise dans ses souvenirs d'enfance, arpentés dans les salles du Louvre, une peinture à l'huile sur bois ou sur toile où la composition compte autant que la couleur. Portraits, scènes intimes, paysages et natures mortes : une œuvre guidée par l'émotion plus que par la ressemblance.
+  </p>
+</section>
 
-      <dt>Profil Singulart</dt>
-      <dd><a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">singulart.com/michel-phelippeau</a></dd>
-
-      <dt>Localisation</dt>
-      <dd>France</dd>
-    </dl>
-
-    <form class="contact-form" action="mailto:contact@michel-phelippeau.com" method="post" enctype="text/plain">
-      <div>
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required>
+<section class="section" id="apercu" style="padding-top:0;">
+  <p class="section-eyebrow">Quelques œuvres</p>
+  <h2 class="section-title" style="font-size:1.8rem;">Aperçu des œuvres</h2>
+  <div class="gallery-grid" id="apercu-grid">
+    <div class="gallery-item">
+      <img src="images/oeuvres/la-chevauchee-idyllique.jpg" alt="La chevauchée idyllique, peinture de Michel Phelippeau">
+      <div class="cartel">
+        <div class="titre">La chevauchée idyllique</div>
+        <div class="detail">Huile</div>
       </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+    </div>
+    <div class="gallery-item">
+      <img src="images/oeuvres/magie-de-paysage.jpg" alt="Magie de paysage, peinture de Michel Phelippeau">
+      <div class="cartel">
+        <div class="titre">Magie de paysage</div>
+        <div class="detail">Huile</div>
       </div>
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
+    </div>
+    <div class="gallery-item">
+      <img src="images/oeuvres/en-plein-spectacle.jpg" alt="En plein spectacle, peinture de Michel Phelippeau">
+      <div class="cartel">
+        <div class="titre">En plein spectacle</div>
+        <div class="detail">Huile</div>
       </div>
-      <button type="submit">Envoyer</button>
-    </form>
+    </div>
+    <div class="gallery-item">
+      <img src="images/oeuvres/marche-provencal.jpg" alt="Marché provençal, peinture de Michel Phelippeau">
+      <div class="cartel">
+        <div class="titre">Marché provençal</div>
+        <div class="detail">Huile</div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="images/oeuvres/introspection.jpg" alt="Introspection, peinture de Michel Phelippeau">
+      <div class="cartel">
+        <div class="titre">Introspection</div>
+        <div class="detail">Huile sur toile — 150 × 200 cm</div>
+      </div>
+    </div>
+    <div class="gallery-item placeholder-item">Œuvre —<br>en attente de la photo</div>
+  </div>
+  <div style="margin-top:56px;">
+    <a href="pages/oeuvres/portraits.html" style="font-family:var(--font-mono); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; border-bottom:1px solid var(--sienne); color:var(--sienne); padding-bottom:4px;">Voir toutes les œuvres →</a>
   </div>
 </section>
-</div>
 
 <footer class="site-footer">
   <span>© <span id="year"></span> Michel Phelippeau</span>
   <div class="footer-links">
-    <a href="contact.html">Contact</a>
+    <a href="pages/contact.html">Contact</a>
     <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">Singulart</a>
   </div>
 </footer>
 
-
-<!-- Lightbox -->
-<div id="lightbox" role="dialog" aria-modal="true" aria-label="Vue agrandie de l'œuvre">
-  <div class="lightbox-inner">
-    <button id="lightbox-close" aria-label="Fermer">✕</button>
-    <img id="lightbox-img" src="" alt="">
-    <div class="lightbox-cartel">
-      <div class="titre" id="lightbox-titre"></div>
-      <div class="detail" id="lightbox-detail"></div>
-    </div>
-  </div>
-  <button id="lightbox-prev" aria-label="Œuvre précédente">&#8592;</button>
-  <button id="lightbox-next" aria-label="Œuvre suivante">&#8594;</button>
-</div>
-<!-- Curseur personnalisé -->
-<div id="cursor"></div>
-
-<script src="../js/main.js"></script>
-<script src="../js/slideshow.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
