@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Michel Phelippeau</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="site-title"><span class="first">michel</span> phelippeau</a>
+  <nav class="main-nav">
+    <a href="../index.html">Accueil</a>
+    <div class="nav-item-dropdown">
+      <a href="oeuvres/portraits.html" class="dropdown-toggle">Œuvres</a>
+      <div class="dropdown-menu">
+        <a href="oeuvres/portraits.html">Portraits</a>
+        <a href="oeuvres/paysages.html">Paysages</a>
+        <a href="oeuvres/natures-mortes.html">Natures mortes</a>
+        <a href="oeuvres/personnages.html">Personnages</a>
+      </div>
+    </div>
+    <a href="videos.html">Vidéos</a>
+    <a href="biographie.html">Biographie</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="page-transition">
+<section class="section" style="padding-top:160px;">
+  <p class="section-eyebrow">Contact</p>
+  <h1 class="section-title">Échanger autour d'une œuvre</h1>
+  <p class="section-lede">Pour toute question, demande de commande ou acquisition, écrivez-moi directement.</p>
+
+  <div class="contact-grid">
+    <dl class="contact-info">
+      <dt>Email</dt>
+      <dd><a href="mailto:contact@michel-phelippeau.com">contact@michel-phelippeau.com</a></dd>
+
+      <dt>Profil Singulart</dt>
+      <dd><a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">singulart.com/michel-phelippeau</a></dd>
+
+      <dt>Localisation</dt>
+      <dd>France</dd>
+    </dl>
+
+    <form class="contact-form" action="mailto:contact@michel-phelippeau.com" method="post" enctype="text/plain">
+      <div>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Envoyer</button>
+    </form>
+  </div>
+</section>
+</div>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Michel Phelippeau</span>
+  <div class="footer-links">
+    <a href="contact.html">Contact</a>
+    <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">Singulart</a>
+  </div>
+</footer>
+
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Vue agrandie de l'œuvre">
+  <div class="lightbox-inner">
+    <button id="lightbox-close" aria-label="Fermer">✕</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-cartel">
+      <div class="titre" id="lightbox-titre"></div>
+      <div class="detail" id="lightbox-detail"></div>
+    </div>
+  </div>
+  <button id="lightbox-prev" aria-label="Œuvre précédente">&#8592;</button>
+  <button id="lightbox-next" aria-label="Œuvre suivante">&#8594;</button>
+</div>
+<!-- Curseur personnalisé -->
+<div id="cursor"></div>
+
+<script src="../js/main.js"></script>
+<script src="../js/slideshow.js"></script>
+</body>
+</html>
