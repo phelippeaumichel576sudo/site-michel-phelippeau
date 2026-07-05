@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidéos — Michel Phelippeau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<style>
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  margin-top: 64px;
+}
+
+.video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: var(--charbon-full);
+  overflow: hidden;
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+.video-info .video-titre {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.video-info .video-detail {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+@media (max-width: 700px) {
+  .videos-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="site-title"><span class="first">michel</span> phelippeau</a>
+  <nav class="main-nav">
+    <a href="../index.html">Accueil</a>
+    <div class="nav-item-dropdown">
+      <a href="oeuvres/portraits.html" class="dropdown-toggle">Œuvres</a>
+      <div class="dropdown-menu">
+        <a href="oeuvres/portraits.html">Portraits</a>
+        <a href="oeuvres/paysages.html">Paysages</a>
+        <a href="oeuvres/natures-mortes.html">Natures mortes</a>
+        <a href="oeuvres/personnages.html">Personnages</a>
+      </div>
+    </div>
+    <a href="videos.html" class="active">Vidéos</a>
+    <a href="biographie.html">Biographie</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+</header>
+
+<div class="page-transition">
+<section class="section" style="padding-top:160px;">
+  <p class="section-eyebrow reveal">En images</p>
+  <h1 class="section-title reveal reveal-delay-1">Vidéos</h1>
+  <p class="section-lede reveal reveal-delay-2">
+    Plongez dans l'univers de l'atelier — reportages, making-of et expositions filmées.
+    Retrouvez toutes mes vidéos sur <a href="https://www.youtube.com/@michelphelippeau-artiste" target="_blank" rel="noopener" style="color:var(--sienne); border-bottom:1px solid var(--sienne);">ma chaîne YouTube</a>.
+  </p>
+
+  <div class="videos-grid">
+
+    <div class="video-card reveal">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/ZOD3Z5lpieI"
+          title="Michel Phelippeau — Peintre"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-titre">Michel Phelippeau : Un peintre dans la villa Fragonard</div>
+        <div class="video-detail">Reportage · Villa Fragonard, Grasse</div>
+      </div>
+    </div>
+
+    <!-- Prochaines vidéos à ajouter ici -->
+
+    <div class="video-card reveal reveal-delay-1">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/allRgAhPgdc"
+          title="Roses et portraits par Michel Phelippeau"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-titre">Roses et portraits par Michel Phelippeau</div>
+        <div class="video-detail">Peinture · Grasse</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal reveal-delay-2">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/u4zTXcmo1FQ"
+          title="L'amandier en fleurs — Michel Phelippeau"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-titre">L'amandier en fleurs</div>
+        <div class="video-detail">Peinture · Grasse</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal reveal-delay-3">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/CJbG_zt0MJs"
+          title="Atelier de Michel Phelippeau juillet 2021"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-titre">Atelier de Michel Phelippeau — Juillet 2021</div>
+        <div class="video-detail">Reportage atelier · Grasse</div>
+      </div>
+    </div>
+
+    <div class="video-card reveal">
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/93zJXDAtRDM"
+          title="Tuto : Portrait d'Hortense — Michel Phelippeau"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <div class="video-info">
+        <div class="video-titre">Tuto : Portrait d'Hortense</div>
+        <div class="video-detail">Tutoriel peinture · Grasse</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+</div>
+
+<footer class="site-footer">
+  <span>© <span id="year"></span> Michel Phelippeau</span>
+  <div class="footer-links">
+    <a href="contact.html">Contact</a>
+    <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">Singulart</a>
+  </div>
+</footer>
+
+<div id="lightbox" role="dialog" aria-modal="true">
+  <div class="lightbox-inner">
+    <button id="lightbox-close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-cartel">
+      <div class="titre" id="lightbox-titre"></div>
+      <div class="detail" id="lightbox-detail"></div>
+    </div>
+  </div>
+  <button id="lightbox-prev">&#8592;</button>
+  <button id="lightbox-next">&#8594;</button>
+</div>
+<div id="cursor"></div>
+
+<script src="../js/main.js"></script>
+<script src="../js/slideshow.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

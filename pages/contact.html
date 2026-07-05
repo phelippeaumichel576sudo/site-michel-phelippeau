@@ -24,12 +24,14 @@
         <a href="oeuvres/personnages.html">Personnages</a>
       </div>
     </div>
+    <a href="videos.html">Vidéos</a>
     <a href="biographie.html">Biographie</a>
     <a href="contact.html" class="active">Contact</a>
   </nav>
   <button class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
 </header>
 
+<div class="page-transition">
 <section class="section" style="padding-top:160px;">
   <p class="section-eyebrow">Contact</p>
   <h1 class="section-title">Échanger autour d'une œuvre</h1>
@@ -64,6 +66,7 @@
     </form>
   </div>
 </section>
+</div>
 
 <footer class="site-footer">
   <span>© <span id="year"></span> Michel Phelippeau</span>
@@ -73,7 +76,24 @@
   </div>
 </footer>
 
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Vue agrandie de l'œuvre">
+  <div class="lightbox-inner">
+    <button id="lightbox-close" aria-label="Fermer">✕</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-cartel">
+      <div class="titre" id="lightbox-titre"></div>
+      <div class="detail" id="lightbox-detail"></div>
+    </div>
+  </div>
+  <button id="lightbox-prev" aria-label="Œuvre précédente">&#8592;</button>
+  <button id="lightbox-next" aria-label="Œuvre suivante">&#8594;</button>
+</div>
+<!-- Curseur personnalisé -->
+<div id="cursor"></div>
+
 <script src="../js/main.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="../js/slideshow.js"></script>
 </body>
 </html>
