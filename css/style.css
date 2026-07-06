@@ -55,8 +55,8 @@ button { cursor: none; }
 #cursor {
   position: fixed;
   top: 0; left: 0;
-  width: 12px; height: 12px;
-  border: 1.5px solid var(--charbon-full);
+  width: 14px; height: 14px;
+  border: 2px solid var(--charbon-full);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -65,7 +65,7 @@ button { cursor: none; }
               height 0.3s var(--ease-out-expo),
               border-color 0.3s ease,
               background 0.3s ease;
-  mix-blend-mode: difference;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.85), 0 1px 4px rgba(0,0,0,0.35);
 }
 
 #cursor.hover {
@@ -105,6 +105,33 @@ button { cursor: none; }
               background 0.4s ease,
               backdrop-filter 0.4s ease;
 }
+
+.site-header--home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(13,12,10,0.32) 0%, rgba(13,12,10,0.12) 70%, rgba(13,12,10,0) 100%);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.site-header--home.scrolled::before { opacity: 0; }
+
+.site-header--home .site-title,
+.site-header--home nav.main-nav > a,
+.site-header--home nav.main-nav .dropdown-toggle {
+  text-shadow: 0 1px 6px rgba(0,0,0,0.45);
+  transition: color 0.2s ease, text-shadow 0.4s ease;
+}
+
+.site-header--home.scrolled .site-title,
+.site-header--home.scrolled nav.main-nav > a,
+.site-header--home.scrolled nav.main-nav .dropdown-toggle {
+  text-shadow: none;
+}
+
 
 .site-header.scrolled {
   padding: 18px 56px;
@@ -912,6 +939,21 @@ footer.site-footer {
 
 footer.site-footer .footer-links { display: flex; gap: 28px; }
 footer.site-footer a:hover { color: var(--sienne); }
+
+.footer-links a { display: inline-flex; align-items: center; gap: 6px; }
+.footer-icon { width: 15px; height: 15px; flex-shrink: 0; }
+.footer-icon-mono {
+  width: 15px; height: 15px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
 
 /* ===========================================================
    FOCUS VISIBLE
