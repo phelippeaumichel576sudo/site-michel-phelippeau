@@ -100,45 +100,17 @@ button { cursor: none; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 32px 56px;
-  transition: padding 0.4s var(--ease-out-expo),
-              background 0.4s ease,
-              backdrop-filter 0.4s ease;
-}
-
-.site-header--home::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(13,12,10,0.32) 0%, rgba(13,12,10,0.12) 70%, rgba(13,12,10,0) 100%);
-  pointer-events: none;
-  z-index: -1;
-  opacity: 1;
-  transition: opacity 0.4s ease;
-}
-
-.site-header--home.scrolled::before { opacity: 0; }
-
-.site-header--home .site-title,
-.site-header--home nav.main-nav > a,
-.site-header--home nav.main-nav .dropdown-toggle {
-  text-shadow: 0 1px 6px rgba(0,0,0,0.45);
-  transition: color 0.2s ease, text-shadow 0.4s ease;
-}
-
-.site-header--home.scrolled .site-title,
-.site-header--home.scrolled nav.main-nav > a,
-.site-header--home.scrolled nav.main-nav .dropdown-toggle {
-  text-shadow: none;
-}
-
-
-.site-header.scrolled {
   padding: 18px 56px;
   background: rgba(248,244,238,0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--beige);
+  transition: padding 0.4s var(--ease-out-expo);
+}
+
+
+.site-header.scrolled {
+  padding: 14px 56px;
 }
 
 .site-title {
@@ -213,6 +185,15 @@ nav.main-nav .dropdown-toggle.active { color: var(--sienne); }
   color: var(--sienne);
   opacity: 1;
 }
+
+.lang-switcher .lang-link.lang-fr { color: #A0522D; }
+.lang-switcher .lang-link.lang-en { color: #2F6690; }
+.lang-switcher .lang-link.lang-de { color: #A68A3C; }
+.lang-switcher .lang-link.lang-zh { color: #A63D40; }
+.lang-switcher .lang-link.lang-ja { color: #5B5F97; }
+.lang-switcher .lang-link.lang-ko { color: #3A7D63; }
+.lang-switcher .lang-link { opacity: 0.85; }
+.lang-switcher .lang-link:hover { opacity: 1; filter: brightness(0.85); }
 
 .dropdown-menu {
   position: absolute;
@@ -937,23 +918,11 @@ footer.site-footer {
   color: var(--olive);
 }
 
-footer.site-footer .footer-links { display: flex; gap: 28px; }
+footer.site-footer .footer-links { display: flex; flex-wrap: wrap; row-gap: 14px; gap: 24px; }
 footer.site-footer a:hover { color: var(--sienne); }
 
-.footer-links a { display: inline-flex; align-items: center; gap: 6px; }
-.footer-icon { width: 15px; height: 15px; flex-shrink: 0; }
-.footer-icon-mono {
-  width: 15px; height: 15px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  line-height: 1;
-  flex-shrink: 0;
-}
+.footer-links a { display: inline-flex; align-items: center; gap: 9px; }
+.footer-icon { width: 26px; height: 26px; flex-shrink: 0; object-fit: contain; border-radius: 4px; }
 
 /* ===========================================================
    FOCUS VISIBLE
