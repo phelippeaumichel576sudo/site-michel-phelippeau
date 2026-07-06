@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="images/oeuvres/la-chevauchee-idyllique.jpg" fetchpriority="high">
 </head>
 <body>
 
@@ -22,11 +23,14 @@
         <a href="pages/oeuvres/paysages.html">Paysages</a>
         <a href="pages/oeuvres/natures-mortes.html">Natures mortes</a>
         <a href="pages/oeuvres/personnages.html">Personnages</a>
+        <a href="pages/oeuvres/danseuse.html">Danseuse</a>
+        <a href="pages/oeuvres/animaux.html">Animaux</a>
       </div>
     </div>
     <a href="pages/videos.html">Vidéos</a>
     <a href="pages/biographie.html">Biographie</a>
     <a href="pages/contact.html">Contact</a>
+    <span class="lang-switcher"><a href="en/index.html" class="lang-link">EN</a> <a href="de/index.html" class="lang-link">DE</a> <a href="zh/index.html" class="lang-link">中文</a> <a href="ja/index.html" class="lang-link">日本語</a> <a href="ko/index.html" class="lang-link">한국어</a></span>
   </nav>
   <button class="nav-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
 </header>
@@ -34,50 +38,107 @@
 <div class="page-transition">
 <section class="hero">
   <div class="hero-slideshow">
-  <div class="slide" data-titre="La chevauchée idyllique" data-detail="Huile">
-    <img src="images/oeuvres/la-chevauchee-idyllique.jpg" alt="La chevauchée idyllique, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="La chevauchée idyllique" data-detail="Huile sur lin — 81 × 100 cm">
+    <img src="images/oeuvres/la-chevauchee-idyllique.jpg" alt="La chevauchée idyllique, peinture de Michel Phelippeau" loading="eager" fetchpriority="high">
   </div>
-  <div class="slide" data-titre="Magie de paysage" data-detail="Huile">
-    <img src="images/oeuvres/magie-de-paysage.jpg" alt="Magie de paysage, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="Magie de paysage" data-detail="Huile sur lin — 65 × 81 cm">
+    <img src="images/oeuvres/magie-de-paysage.jpg" alt="Magie de paysage, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="Fraîcheur d'été" data-detail="Huile sur lin — 65 × 81 cm">
-    <img src="images/oeuvres/fraicheur-dete.jpg" alt="Fraîcheur d'été, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/fraicheur-dete.jpg" alt="Fraîcheur d'été, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="La grande bleue" data-detail="Huile sur lin — 50 × 61 cm">
-    <img src="images/oeuvres/la-grande-bleue.jpg" alt="La grande bleue, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/la-grande-bleue.jpg" alt="La grande bleue, peinture de Michel Phelippeau" loading="lazy">
   </div>
-  <div class="slide" data-titre="En plein spectacle" data-detail="Huile">
-    <img src="images/oeuvres/en-plein-spectacle.jpg" alt="En plein spectacle, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="Le cours de danse" data-detail="Huile sur lin — 65 × 92 cm">
+    <img src="images/oeuvres/en-plein-spectacle.jpg" alt="Le cours de danse, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="Marché provençal" data-detail="Huile">
-    <img src="images/oeuvres/marche-provencal.jpg" alt="Marché provençal, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/marche-provencal.jpg" alt="Marché provençal, peinture de Michel Phelippeau" loading="lazy">
   </div>
-  <div class="slide" data-titre="Introspection" data-detail="Huile sur toile — 150 × 200 cm">
-    <img src="images/oeuvres/introspection.jpg" alt="Introspection, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="Introspection" data-detail="Huile sur lin — 150 × 200 cm">
+    <img src="images/oeuvres/introspection.jpg" alt="Introspection, peinture de Michel Phelippeau" loading="lazy">
   </div>
-  <div class="slide" data-titre="La Parisienne" data-detail="Huile sur lin — 81 × 65 cm">
-    <img src="images/oeuvres/la-parisienne.jpg" alt="La Parisienne, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="La Parisienne" data-detail="Huile sur lin — 61 × 46 cm">
+    <img src="images/oeuvres/la-parisienne.jpg" alt="La Parisienne, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="La Vahiné" data-detail="Huile sur lin — 81 × 65 cm">
-    <img src="images/oeuvres/la-vahine.jpg" alt="La Vahiné, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/la-vahine.jpg" alt="La Vahiné, peinture de Michel Phelippeau" loading="lazy">
   </div>
-  <div class="slide" data-titre="Tête de cheval" data-detail="Huile">
-    <img src="images/oeuvres/tete-de-cheval.jpg" alt="Tête de cheval, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="Tête de cheval" data-detail="Huile sur lin — 61 × 50 cm">
+    <img src="images/oeuvres/tete-de-cheval.jpg" alt="Tête de cheval, peinture de Michel Phelippeau" loading="lazy">
   </div>
-  <div class="slide" data-titre="Portrait en bleu" data-detail="Huile">
-    <img src="images/oeuvres/portrait-en-bleu.jpg" alt="Portrait en bleu, peinture de Michel Phelippeau">
+  <div class="slide" data-titre="Harumi dans le métro" data-detail="Huile sur lin — 73 × 54 cm">
+    <img src="images/oeuvres/portrait-en-bleu.jpg" alt="Harumi dans le métro, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="Cheval blanc" data-detail="Huile sur lin — 61 × 50 cm">
-    <img src="images/oeuvres/cheval-blanc.jpg" alt="Cheval blanc, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/cheval-blanc.jpg" alt="Cheval blanc, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="Anémones sensualité" data-detail="Huile sur lin — 92 × 65 cm">
-    <img src="images/oeuvres/anemones-sensualite.jpg" alt="Anémones sensualité, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/anemones-sensualite.jpg" alt="Anémones sensualité, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="Bouquet de roses" data-detail="Huile sur lin — 92 × 60 cm">
-    <img src="images/oeuvres/bouquet-de-roses.jpg" alt="Bouquet de roses, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/bouquet-de-roses.jpg" alt="Bouquet de roses, peinture de Michel Phelippeau" loading="lazy">
   </div>
   <div class="slide" data-titre="Roses" data-detail="Huile sur lin — 80 × 80 cm">
-    <img src="images/oeuvres/roses.jpg" alt="Roses, peinture de Michel Phelippeau">
+    <img src="images/oeuvres/roses.jpg" alt="Roses, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Alexia" data-detail="Huile sur isorel — 61 × 46 cm">
+    <img src="images/oeuvres/alexia.jpg" alt="Alexia, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="La partie de boules" data-detail="Huile sur lin — 50 × 61 cm">
+    <img src="images/oeuvres/la-partie-de-boules.jpg" alt="La partie de boules, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Éclipse matinale" data-detail="Huile — 70 × 70 cm">
+    <img src="images/oeuvres/eclipse-matinale.jpg" alt="Éclipse matinale, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Portrait : L'ombre du doute" data-detail="Huile — 46 × 38 cm">
+    <img src="images/oeuvres/lombre-du-doute.jpg" alt="Portrait : L'ombre du doute, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Au fil de l'eau" data-detail="Huile sur lin — 73 × 92 cm">
+    <img src="images/oeuvres/au-fil-de-leau.jpg" alt="Au fil de l'eau, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="La ballerine verte" data-detail="Huile sur lin — 46 × 61 cm">
+    <img src="images/oeuvres/la-ballerine-verte.jpg" alt="La ballerine verte, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="La répétition" data-detail="Huile sur toile — 50 × 65 cm">
+    <img src="images/oeuvres/la-repetition.jpg" alt="La répétition, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Douceur angélique" data-detail="Huile sur lin — 65 × 81 cm">
+    <img src="images/oeuvres/douceur-angelique.jpg" alt="Douceur angélique, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="L'eau de pluie fait des fresques" data-detail="Huile sur lin — 100 × 100 cm">
+    <img src="images/oeuvres/leau-de-pluie-fait-des-fresques.jpg" alt="L'eau de pluie fait des fresques, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Soleil profond" data-detail="Huile sur lin — 50 × 61 cm">
+    <img src="images/oeuvres/soleil-profond.jpg" alt="Soleil profond, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="La danseuse rêveuse" data-detail="Huile sur lin — 81 × 65 cm">
+    <img src="images/oeuvres/la-danseuse-reveuse.jpg" alt="La danseuse rêveuse, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="L'éclat de bleu dans les cheveux" data-detail="Huile sur lin — 61 × 50 cm">
+    <img src="images/oeuvres/leclat-de-bleu-dans-les-cheveux.jpg" alt="L'éclat de bleu dans les cheveux, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="La bonne décision" data-detail="Huile sur lin — 70 × 50 cm">
+    <img src="images/oeuvres/la-bonne-decision.jpg" alt="La bonne décision, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Cresolia" data-detail="Huile sur lin — 81 × 60 cm">
+    <img src="images/oeuvres/cresolia.jpg" alt="Cresolia, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Daltona" data-detail="Huile sur lin — 61 × 50 cm">
+    <img src="images/oeuvres/daltona.jpg" alt="Daltona, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Aleonoria" data-detail="Huile sur lin — 81 × 60 cm">
+    <img src="images/oeuvres/aleonoria.jpg" alt="Aleonoria, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Louise" data-detail="Huile sur toile — 73 × 60 cm">
+    <img src="images/oeuvres/louise.jpg" alt="Louise, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Aramisa" data-detail="Huile sur lin — 81 × 65 cm">
+    <img src="images/oeuvres/aramisa.jpg" alt="Aramisa, peinture de Michel Phelippeau" loading="lazy">
+  </div>
+  <div class="slide" data-titre="Naxella" data-detail="Huile sur bois — 31 × 31 cm">
+    <img src="images/oeuvres/naxella.jpg" alt="Naxella, peinture de Michel Phelippeau" loading="lazy">
   </div>
   </div>
   <div class="hero-overlay"></div>
@@ -115,6 +176,25 @@
   <button aria-label="Slide 13"></button>
   <button aria-label="Slide 14"></button>
   <button aria-label="Slide 15"></button>
+  <button aria-label="Slide 16"></button>
+  <button aria-label="Slide 17"></button>
+  <button aria-label="Slide 18"></button>
+  <button aria-label="Slide 19"></button>
+  <button aria-label="Slide 20"></button>
+  <button aria-label="Slide 21"></button>
+  <button aria-label="Slide 22"></button>
+  <button aria-label="Slide 23"></button>
+  <button aria-label="Slide 24"></button>
+  <button aria-label="Slide 25"></button>
+  <button aria-label="Slide 26"></button>
+  <button aria-label="Slide 27"></button>
+  <button aria-label="Slide 28"></button>
+  <button aria-label="Slide 29"></button>
+  <button aria-label="Slide 30"></button>
+  <button aria-label="Slide 31"></button>
+  <button aria-label="Slide 32"></button>
+  <button aria-label="Slide 33"></button>
+  <button aria-label="Slide 34"></button>
   </div>
 
   <div class="scroll-cue">Découvrir</div>
@@ -139,21 +219,21 @@
       <img src="images/oeuvres/la-chevauchee-idyllique.jpg" alt="La chevauchée idyllique, peinture de Michel Phelippeau">
       <div class="cartel">
         <div class="titre">La chevauchée idyllique</div>
-        <div class="detail">Huile</div>
+        <div class="detail">Huile sur lin — 81 × 100 cm</div>
       </div>
     </div>
     <div class="gallery-item">
-      <img src="images/oeuvres/en-plein-spectacle.jpg" alt="En plein spectacle, peinture de Michel Phelippeau">
+      <img src="images/oeuvres/en-plein-spectacle.jpg" alt="Le cours de danse, peinture de Michel Phelippeau">
       <div class="cartel">
-        <div class="titre">En plein spectacle</div>
-        <div class="detail">Huile</div>
+        <div class="titre">Le cours de danse</div>
+        <div class="detail">Huile sur lin — 65 × 92 cm</div>
       </div>
     </div>
     <div class="gallery-item">
       <img src="images/oeuvres/tete-de-cheval.jpg" alt="Tête de cheval, peinture de Michel Phelippeau">
       <div class="cartel">
         <div class="titre">Tête de cheval</div>
-        <div class="detail">Huile</div>
+        <div class="detail">Huile sur lin — 61 × 50 cm</div>
       </div>
     </div>
     <div class="gallery-item">
@@ -167,7 +247,7 @@
       <img src="images/oeuvres/magie-de-paysage.jpg" alt="Magie de paysage, peinture de Michel Phelippeau">
       <div class="cartel">
         <div class="titre">Magie de paysage</div>
-        <div class="detail">Huile</div>
+        <div class="detail">Huile sur lin — 65 × 81 cm</div>
       </div>
     </div>
     <div class="gallery-item">
@@ -189,6 +269,11 @@
   <div class="footer-links">
     <a href="pages/contact.html">Contact</a>
     <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">Singulart</a>
+    <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" style="display:inline-flex;align-items:center;gap:8px;background:#0b08c8;padding:8px 14px;border-radius:20px;text-decoration:none;" target="_blank" rel="noopener"><span style="font-size:13px;font-weight:500;color:#c8c6ff;">Verified artist on Singulart</span></a>
+    <a href="https://www.artsy.net/artist/michel-phelippeau" target="_blank" rel="noopener">Artsy</a>
+    <a href="https://www.artmajeur.com/michel-phelippeau" target="_blank" rel="noopener">Artmajeur</a>
+    <a href="https://www.instagram.com/phelippeaumichel/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/michel.phelippeau.3/" target="_blank" rel="noopener">Facebook</a>
   </div>
 </footer>
 
