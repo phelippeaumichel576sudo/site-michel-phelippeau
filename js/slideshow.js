@@ -15,7 +15,7 @@ function initSlideshow() {
 
   let current = 0;
   let timer = null;
-  const INTERVAL = 5500;
+  const INTERVAL = 2800;
 
   function goTo(index) {
     slides[current].classList.remove('active');
