@@ -66,6 +66,12 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
 }
+.presse-summary-full {
+  max-width: 720px;
+  margin-top: -8px;
+  margin-bottom: 40px;
+  font-size: 0.88rem;
+}
 @media (max-width: 700px) {
   .presse-grid { grid-template-columns: 1fr; }
 }
@@ -195,11 +201,12 @@
   </div>
 
 
-  <h2 class="presse-section-title reveal">저서 — Senteurs picturales en Birmanie</h2>
+    <h2 class="presse-section-title reveal">저서 — Senteurs picturales en Birmanie</h2>
   <p class="section-lede reveal reveal-delay-1">
     2020년 Diverti Éditions에서 출판된 이 160페이지 분량의 책은 회화를 통해 미얀마 여행을 담고 있습니다.
   </p>
-  <div class="presse-grid">
+
+  <div class="presse-grid presse-grid-pair">
     <div class="presse-item gallery-item reveal">
       <img src="../../images/presse/livre-couverture-recto.jpg" alt="Michel Phelippeau의 저서 Senteurs picturales en Birmanie 표지">
       <div class="cartel">
@@ -213,16 +220,19 @@
         <div class="titre presse-titre">뒤표지</div>
         <div class="detail presse-detail">Senteurs picturales en Birmanie, 2020년</div>
       </div>
-      <p class="presse-summary">이 책에서 Michel Phelippeau는 2018년부터 2020년까지 미얀마(버마)에서 그린 작품들을 소개합니다. 양곤에 도착하자마자 그는 이 나라의 분위기——향기, 색채, 의복, 건물, 새소리, 확성기에서 흘러나오는 노래, 다양성, 그리고 주민들의 친절함——에 매료되었습니다. 그는 이 모든 감각을 야외에서 실물을 보고 그린 캔버스에 담아내고자 했습니다.</p>
     </div>
-    <div class="presse-item gallery-item reveal reveal-delay-2">
+  </div>
+  <p class="presse-summary presse-summary-full reveal reveal-delay-2">이 책에서 Michel Phelippeau는 2018년부터 2020년까지 미얀마(버마)에서 그린 작품들을 소개합니다. 양곤에 도착하자마자 그는 이 나라의 분위기——향기, 색채, 의복, 건물, 새소리, 확성기에서 흘러나오는 노래, 다양성, 그리고 주민들의 친절함——에 매료되었습니다. 그는 이 모든 감각을 야외에서 실물을 보고 그린 캔버스에 담아내고자 했습니다.</p>
+
+  <div class="presse-grid presse-grid-pair">
+    <div class="presse-item gallery-item reveal">
       <img src="../../images/presse/livre-page-temple-chinois.jpg" alt="양곤의 중국 사원과 차이나타운">
       <div class="cartel">
         <div class="titre presse-titre">양곤의 중국 사원과 차이나타운</div>
         <div class="detail presse-detail">Senteurs picturales en Birmanie, 2020년</div>
       </div>
     </div>
-    <div class="presse-item gallery-item reveal">
+    <div class="presse-item gallery-item reveal reveal-delay-1">
       <img src="../../images/presse/livre-page-portrait.jpg" alt="풍경과 초상">
       <div class="cartel">
         <div class="titre presse-titre">풍경과 초상</div>
@@ -233,36 +243,3 @@
 
 </section>
 </div>
-
-<footer class="site-footer">
-  <span>© <span id="year"></span> Michel Phelippeau</span>
-  <div class="footer-links">
-    <a href="contact.html">문의</a>
-    <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener"><img class="footer-icon" src="https://www.google.com/s2/favicons?domain=singulart.com&sz=64" alt="">Singulart</a>
-    <a href="https://www.singulart.com/en/artist/michel-phelippeau-59141" style="display:inline-flex;align-items:center;gap:8px;background:#0b08c8;padding:8px 14px;border-radius:20px;text-decoration:none;" target="_blank" rel="noopener"><span style="font-size:13px;font-weight:500;color:#c8c6ff;">Verified artist on Singulart</span></a>
-    <a href="https://www.artsy.net/artist/michel-phelippeau" target="_blank" rel="noopener"><img class="footer-icon" src="https://www.google.com/s2/favicons?domain=artsy.net&sz=64" alt="">Artsy</a>
-    <a href="https://www.artmajeur.com/michel-phelippeau" target="_blank" rel="noopener"><img class="footer-icon" src="https://www.google.com/s2/favicons?domain=artmajeur.com&sz=64" alt="">Artmajeur</a>
-    <a href="https://www.instagram.com/phelippeaumichel/" target="_blank" rel="noopener"><img class="footer-icon" src="https://cdn.simpleicons.org/instagram" alt="">Instagram</a>
-    <a href="https://www.facebook.com/michel.phelippeau.3/" target="_blank" rel="noopener"><img class="footer-icon" src="https://cdn.simpleicons.org/facebook" alt="">Facebook</a>
-  </div>
-</footer>
-
-<div id="lightbox" role="dialog" aria-modal="true">
-  <div class="lightbox-inner">
-    <button id="lightbox-close">✕</button>
-    <img id="lightbox-img" src="" alt="">
-    <div class="lightbox-cartel">
-      <div class="titre" id="lightbox-titre"></div>
-      <div class="detail" id="lightbox-detail"></div>
-    </div>
-  </div>
-  <button id="lightbox-prev">&#8592;</button>
-  <button id="lightbox-next">&#8594;</button>
-</div>
-<div id="cursor"></div>
-
-<script src="../../js/main.js"></script>
-<script src="../../js/slideshow.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
