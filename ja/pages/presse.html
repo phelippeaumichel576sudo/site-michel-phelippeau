@@ -66,14 +66,17 @@
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
 }
-.presse-summary-full {
-  max-width: 720px;
-  margin-top: -8px;
-  margin-bottom: 40px;
-  font-size: 0.88rem;
+.presse-cover-feature {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 48px;
 }
+.presse-cover-feature .presse-summary { font-size: 0.85rem; margin-top: 4px; }
 @media (max-width: 700px) {
   .presse-grid { grid-template-columns: 1fr; }
+  .presse-cover-feature { grid-template-columns: 1fr; }
 }
 
 </style>
@@ -201,28 +204,21 @@
   </div>
 
 
-    <h2 class="presse-section-title reveal">書籍 ——Senteurs picturales en Birmanie</h2>
+      <h2 class="presse-section-title reveal">書籍 ——Senteurs picturales en Birmanie</h2>
   <p class="section-lede reveal reveal-delay-1">
     2020年にDiverti Éditionsより出版されたこの160ページの書籍は、絵画を通じてミャンマーへの旅を綴っています。
   </p>
 
-  <div class="presse-grid presse-grid-pair">
-    <div class="presse-item gallery-item reveal">
+  <div class="presse-cover-feature reveal">
+    <div class="presse-item gallery-item">
       <img src="../../images/presse/livre-couverture-recto.jpg" alt="Michel Phelippeau著『Senteurs picturales en Birmanie』表紙">
       <div class="cartel">
         <div class="titre presse-titre">表紙</div>
         <div class="detail presse-detail">Senteurs picturales en Birmanie、2020年</div>
       </div>
     </div>
-    <div class="presse-item gallery-item reveal reveal-delay-1">
-      <img src="../../images/presse/livre-couverture-verso.jpg" alt="『Senteurs picturales en Birmanie』裏表紙、Michel Phelippeauの肖像">
-      <div class="cartel">
-        <div class="titre presse-titre">裏表紙</div>
-        <div class="detail presse-detail">Senteurs picturales en Birmanie、2020年</div>
-      </div>
-    </div>
+    <p class="presse-summary">本書でMichel Phelippeauは、2018年から2020年にかけてミャンマー（ビルマ）で制作した絵画を紹介しています。ヤンゴンに到着した瞬間から、彼はこの国の雰囲気——香り、色彩、衣装、建物、鳥のさえずり、スピーカーから流れる歌声、多様性、そして人々の優しさ——に魅了されました。彼はこれらすべての感覚を、屋外で実物を見ながら描いたキャンバスに写し取ろうとしました。</p>
   </div>
-  <p class="presse-summary presse-summary-full reveal reveal-delay-2">本書でMichel Phelippeauは、2018年から2020年にかけてミャンマー（ビルマ）で制作した絵画を紹介しています。ヤンゴンに到着した瞬間から、彼はこの国の雰囲気——香り、色彩、衣装、建物、鳥のさえずり、スピーカーから流れる歌声、多様性、そして人々の優しさ——に魅了されました。彼はこれらすべての感覚を、屋外で実物を見ながら描いたキャンバスに写し取ろうとしました。</p>
 
   <div class="presse-grid presse-grid-pair">
     <div class="presse-item gallery-item reveal">
@@ -236,6 +232,16 @@
       <img src="../../images/presse/livre-page-portrait.jpg" alt="風景と肖像">
       <div class="cartel">
         <div class="titre presse-titre">風景と肖像</div>
+        <div class="detail presse-detail">Senteurs picturales en Birmanie、2020年</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="presse-grid presse-grid-solo">
+    <div class="presse-item gallery-item reveal">
+      <img src="../../images/presse/livre-couverture-verso.jpg" alt="『Senteurs picturales en Birmanie』裏表紙、Michel Phelippeauの肖像">
+      <div class="cartel">
+        <div class="titre presse-titre">裏表紙</div>
         <div class="detail presse-detail">Senteurs picturales en Birmanie、2020年</div>
       </div>
     </div>
