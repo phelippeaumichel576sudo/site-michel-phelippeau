@@ -186,8 +186,10 @@ nav.main-nav .dropdown-toggle.active { color: var(--sienne); }
 }
 
 .lang-switcher .lang-flag {
-  font-size: 1.35rem;
-  line-height: 1;
+  width: 22px;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 }
 
 .lang-switcher .lang-link:hover {
