@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michel Phelippeau — Artiste Peintre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1A1918;
+    --gold:#C9A260;
+    --gold-soft:#a9895a;
+    --text:#EDE8DF;
+    --muted:#8a8578;
+    --hairline:rgba(201,162,96,0.28);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse 900px 600px at 50% -10%, rgba(201,162,96,0.10), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:'Inter', sans-serif;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{
+    width:100%;
+    max-width:480px;
+    padding:64px 28px 56px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .portrait-frame{
+    width:112px;
+    height:112px;
+    border-radius:50%;
+    border:1px solid var(--hairline);
+    padding:5px;
+    margin-bottom:26px;
+  }
+  .portrait-frame .inner{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background:linear-gradient(160deg,#2a2724,#141312);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    font-style:italic;
+    color:var(--gold);
+  }
+  h1{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    font-size:34px;
+    letter-spacing:0.02em;
+    margin:0 0 6px;
+    text-align:center;
+  }
+  .tagline{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:17px;
+    color:var(--gold);
+    margin:0 0 6px;
+    text-align:center;
+  }
+  .location{
+    font-size:12px;
+    letter-spacing:0.14em;
+    color:var(--muted);
+    margin:0 0 40px;
+    text-transform:uppercase;
+  }
+  .links{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+  }
+  .link-row{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:20px 6px;
+    text-decoration:none;
+    color:var(--text);
+    border-top:1px solid var(--hairline);
+    transition:padding-left 0.25s ease, color 0.25s ease;
+  }
+  .links .link-row:last-child{ border-bottom:1px solid var(--hairline); }
+  .link-row:hover{
+    padding-left:14px;
+    color:var(--gold);
+  }
+  .link-index{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:15px;
+    color:var(--gold-soft);
+    width:22px;
+    flex-shrink:0;
+  }
+  .link-body{ flex:1; min-width:0; }
+  .link-title{
+    font-size:16px;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+  .link-sub{
+    font-size:12.5px;
+    color:var(--muted);
+    margin-top:2px;
+  }
+  .link-arrow{
+    font-family:'Cormorant Garamond', serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--gold-soft);
+    flex-shrink:0;
+    transform:translateX(0);
+    transition:transform 0.25s ease;
+  }
+  .link-row:hover .link-arrow{ transform:translateX(4px); color:var(--gold); }
+
+  .featured{
+    background:linear-gradient(180deg, rgba(201,162,96,0.10), rgba(201,162,96,0.02));
+    border-top:1px solid var(--hairline) !important;
+    margin-top:6px;
+    border-radius:2px;
+  }
+  .featured .link-title{ color:var(--gold); }
+
+  footer{
+    margin-top:48px;
+    text-align:center;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--muted);
+    text-transform:uppercase;
+  }
+  @media (max-width:380px){
+    .page{ padding:48px 20px 40px; }
+    h1{ font-size:29px; }
+  }
+  .lang-toggle{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:6px;
+    margin-bottom:36px;
+    max-width:340px;
+  }
+  .lang-toggle button{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    font-family:'Inter', sans-serif;
+    font-size:9.5px;
+    letter-spacing:0.06em;
+    background:none;
+    border:1px solid var(--hairline);
+    color:var(--muted);
+    padding:7px 10px 6px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:border-color 0.2s ease, color 0.2s ease;
+  }
+  .lang-toggle button svg{ width:20px; height:14px; border-radius:2px; display:block; }
+  .lang-toggle button.active{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="lang-toggle">
+      <button id="btn-fr" class="active" onclick="setLang('fr')">
+        <svg viewBox="0 0 3 2"><rect width="1" height="2" x="0" fill="#0055A4"/><rect width="1" height="2" x="1" fill="#FFFFFF"/><rect width="1" height="2" x="2" fill="#EF4135"/></svg>
+        FR
+      </button>
+      <button id="btn-en" onclick="setLang('en')">
+        <svg viewBox="0 0 19 10"><rect width="19" height="10" fill="#B22234"/><rect width="19" height="0.77" y="0.77" fill="#fff"/><rect width="19" height="0.77" y="2.31" fill="#fff"/><rect width="19" height="0.77" y="3.85" fill="#fff"/><rect width="19" height="0.77" y="5.38" fill="#fff"/><rect width="19" height="0.77" y="6.92" fill="#fff"/><rect width="19" height="0.77" y="8.46" fill="#fff"/><rect width="7.6" height="5.38" fill="#3C3B6E"/></svg>
+        US
+      </button>
+      <button id="btn-de" onclick="setLang('de')">
+        <svg viewBox="0 0 3 2"><rect width="3" height="0.667" y="0" fill="#000000"/><rect width="3" height="0.667" y="0.667" fill="#DD0000"/><rect width="3" height="0.667" y="1.333" fill="#FFCE00"/></svg>
+        DE
+      </button>
+      <button id="btn-es" onclick="setLang('es')">
+        <svg viewBox="0 0 3 2"><rect width="3" height="2" fill="#AA151B"/><rect width="3" height="1" y="0.5" fill="#F1BF00"/></svg>
+        ES
+      </button>
+      <button id="btn-ja" onclick="setLang('ja')">
+        <svg viewBox="0 0 3 2"><rect width="3" height="2" fill="#FFFFFF"/><circle cx="1.5" cy="1" r="0.55" fill="#BC002D"/></svg>
+        JA
+      </button>
+      <button id="btn-zh" onclick="setLang('zh')">
+        <svg viewBox="0 0 3 2"><rect width="3" height="2" fill="#DE2910"/><circle cx="0.6" cy="0.6" r="0.28" fill="#FFDE00"/></svg>
+        中文
+      </button>
+      <button id="btn-ko" onclick="setLang('ko')">
+        <svg viewBox="0 0 3 2"><rect width="3" height="2" fill="#FFFFFF"/><circle cx="1.5" cy="1" r="0.45" fill="#CD2E3A"/><path d="M1.5,0.55 A0.225,0.225 0 0 1 1.5,1 A0.225,0.225 0 0 0 1.5,1.45 A0.45,0.45 0 0 0 1.5,0.55 Z" fill="#0047A0"/></svg>
+        KO
+      </button>
+      <button id="btn-pt" onclick="setLang('pt')">
+        <svg viewBox="0 0 3 2"><rect width="1.2" height="2" fill="#046A38"/><rect width="1.8" height="2" x="1.2" fill="#DA291C"/></svg>
+        PT
+      </button>
+      <button id="btn-it" onclick="setLang('it')">
+        <svg viewBox="0 0 3 2"><rect width="1" height="2" x="0" fill="#009246"/><rect width="1" height="2" x="1" fill="#FFFFFF"/><rect width="1" height="2" x="2" fill="#CE2B37"/></svg>
+        IT
+      </button>
+    </div>
+    <div class="portrait-frame"><div class="inner">MP</div></div>
+    <h1>Michel Phelippeau</h1>
+    <p class="tagline" data-fr="Artiste peintre" data-pt="Pintor a óleo" data-it="Pittore a olio" data-en="Oil Painter" data-de="Ölmaler" data-es="Pintor al óleo" data-ja="油絵画家" data-zh="油画艺术家" data-ko="유화 화가">Artiste peintre</p>
+    <p class="location" data-fr="Grasse · Provence · France" data-pt="Grasse · Provença · França" data-it="Grasse · Provenza · Francia" data-en="Grasse · Provence · France" data-de="Grasse · Provence · Frankreich" data-es="Grasse · Provenza · Francia" data-ja="グラース・プロヴァンス・フランス" data-zh="格拉斯·普罗旺斯·法国" data-ko="그라스 · 프로방스 · 프랑스">Grasse · Provence · France</p>
+
+    <div class="links">
+      <a class="link-row featured" href="https://www.singulart.com/en/artist/michel-phelippeau-59141" target="_blank" rel="noopener">
+        <span class="link-index">01</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Acquérir une œuvre" data-pt="Adquirir uma obra" data-it="Acquistare un'opera" data-en="Shop the Collection" data-de="Ein Werk erwerben" data-es="Adquirir una obra" data-ja="作品を購入する" data-zh="购买作品" data-ko="작품 구매하기">Acquérir une œuvre</div>
+          <div class="link-sub" data-fr="Boutique officielle sur Singulart" data-pt="Loja oficial na Singulart" data-it="Negozio ufficiale su Singulart" data-en="Official shop on Singulart" data-de="Offizieller Shop auf Singulart" data-es="Tienda oficial en Singulart" data-ja="Singulartの公式ショップ" data-zh="Singulart 官方商店" data-ko="Singulart 공식 스토어">Boutique officielle sur Singulart</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-row" href="https://www.youtube.com/@michelphelippeau-artiste" target="_blank" rel="noopener">
+        <span class="link-index">02</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Dans l'atelier" data-pt="No ateliê" data-it="Nell'atelier" data-en="Inside the Studio" data-de="Im Atelier" data-es="En el taller" data-ja="アトリエにて" data-zh="画室日常" data-ko="아틀리에에서">Dans l'atelier</div>
+          <div class="link-sub" data-fr="Chaîne YouTube — la peinture en train de se faire" data-pt="Canal do YouTube — a pintura em processo" data-it="Canale YouTube — la pittura in divenire" data-en="YouTube channel — watch the paintings come to life" data-de="YouTube-Kanal — die Malerei im Entstehen" data-es="Canal de YouTube — la pintura en proceso" data-ja="YouTubeチャンネル — 制作の様子" data-zh="YouTube 频道 — 创作过程" data-ko="YouTube 채널 — 그림이 완성되는 과정">Chaîne YouTube — la peinture en train de se faire</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-row" href="https://michel-phelippeau.com" target="_blank" rel="noopener">
+        <span class="link-index">03</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Galerie officielle" data-pt="Galeria oficial" data-it="Galleria ufficiale" data-en="Official Gallery" data-de="Offizielle Galerie" data-es="Galería oficial" data-ja="公式ギャラリー" data-zh="官方画廊" data-ko="공식 갤러리">Galerie officielle</div>
+          <div class="link-sub" data-fr="michel-phelippeau.com — galerie la plus complète, en 7 langues" data-pt="michel-phelippeau.com — galeria mais completa, em 7 idiomas" data-it="michel-phelippeau.com — galleria più completa, in 7 lingue" data-en="michel-phelippeau.com — most complete gallery, in 7 languages" data-de="michel-phelippeau.com — vollständigste Galerie, in 7 Sprachen" data-es="michel-phelippeau.com — galería más completa, en 7 idiomas" data-ja="michel-phelippeau.com — 最も充実したギャラリー、7言語対応" data-zh="michel-phelippeau.com — 最完整的画廊，支持7种语言" data-ko="michel-phelippeau.com — 가장 완성도 높은 갤러리, 7개 언어 지원">michel-phelippeau.com — galerie la plus complète, en 7 langues</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-row" href="https://michelphelippeau.art" target="_blank" rel="noopener">
+        <span class="link-index">04</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Le site .art" data-pt="O site .art" data-it="Il sito .art" data-en="The .art Site" data-de="Die .art-Seite" data-es="El sitio .art" data-ja="「.art」サイト" data-zh="「.art」网站" data-ko="「.art」 사이트">Le site .art</div>
+          <div class="link-sub" data-fr="michelphelippeau.art — biographie, presse, contact" data-pt="michelphelippeau.art — biografia, imprensa, contato" data-it="michelphelippeau.art — biografia, stampa, contatti" data-en="michelphelippeau.art — biography, press, contact" data-de="michelphelippeau.art — Biografie, Presse, Kontakt" data-es="michelphelippeau.art — biografía, prensa, contacto" data-ja="michelphelippeau.art — 経歴、プレス、お問い合わせ" data-zh="michelphelippeau.art — 简历、媒体报道、联系方式" data-ko="michelphelippeau.art — 약력, 언론 보도, 연락처">michelphelippeau.art — biographie, presse, contact</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-row" href="https://www.instagram.com/phelippeaumichel/" target="_blank" rel="noopener">
+        <span class="link-index">05</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Instagram" data-en="Instagram" data-de="Instagram" data-es="Instagram" data-ja="Instagram" data-zh="Instagram" data-ko="Instagram" data-pt="Instagram" data-it="Instagram">Instagram</div>
+          <div class="link-sub" data-fr="Coulisses de l'atelier au quotidien" data-pt="Bastidores do ateliê todos os dias" data-it="Dietro le quinte dell'atelier ogni giorno" data-en="Daily behind-the-scenes from the studio" data-de="Tägliche Einblicke aus dem Atelier" data-es="Detrás de escena del taller cada día" data-ja="アトリエの日常" data-zh="画室日常花絮" data-ko="아틀리에의 일상">Coulisses de l'atelier au quotidien</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-row" href="https://www.artsy.net/artist/michel-phelippeau" target="_blank" rel="noopener">
+        <span class="link-index">06</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Artsy" data-en="Artsy" data-de="Artsy" data-es="Artsy" data-ja="Artsy" data-zh="Artsy" data-ko="Artsy" data-pt="Artsy" data-it="Artsy">Artsy</div>
+          <div class="link-sub" data-fr="Œuvres disponibles à l'achat" data-pt="Obras disponíveis para venda" data-it="Opere disponibili per la vendita" data-en="Available works for sale" data-de="Verfügbare Werke zum Kauf" data-es="Obras disponibles para la venta" data-ja="販売中の作品" data-zh="可购买的作品" data-ko="구매 가능한 작품">Œuvres disponibles à l'achat</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+
+      <a class="link-row" href="https://www.artmajeur.com/michel-phelippeau" target="_blank" rel="noopener">
+        <span class="link-index">07</span>
+        <span class="link-body">
+          <div class="link-title" data-fr="Artmajeur" data-en="Artmajeur" data-de="Artmajeur" data-es="Artmajeur" data-ja="Artmajeur" data-zh="Artmajeur" data-ko="Artmajeur" data-pt="Artmajeur" data-it="Artmajeur">Artmajeur</div>
+          <div class="link-sub" data-fr="Œuvres disponibles à l'achat" data-pt="Obras disponíveis para venda" data-it="Opere disponibili per la vendita" data-en="Available works for sale" data-de="Verfügbare Werke zum Kauf" data-es="Obras disponibles para la venta" data-ja="販売中の作品" data-zh="可购买的作品" data-ko="구매 가능한 작품">Œuvres disponibles à l'achat</div>
+        </span>
+        <span class="link-arrow">→</span>
+      </a>
+    </div>
+
+    <footer data-fr="Peinture à l'huile · Grasse, France" data-pt="Pintura a óleo · Grasse, França" data-it="Pittura a olio · Grasse, Francia" data-en="Oil Painting · Grasse, France" data-de="Ölmalerei · Grasse, Frankreich" data-es="Pintura al óleo · Grasse, Francia" data-ja="油絵 · グラース、フランス" data-zh="油画 · 格拉斯，法国" data-ko="유화 · 그라스, 프랑스">Peinture à l'huile · Grasse, France</footer>
+  </div>
+  <script>
+    function setLang(lang){
+      document.querySelectorAll('[data-fr]').forEach(function(el){
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+      ['fr','en','de','es','ja','zh','ko','pt','it'].forEach(function(code){
+        document.getElementById('btn-' + code).classList.toggle('active', code === lang);
+      });
+    }
+  </script>
+</body>
+</html>
